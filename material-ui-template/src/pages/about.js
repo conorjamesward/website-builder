@@ -2,18 +2,19 @@ import StandardLayout from "@/layout/StandardLayout"
 import Head from 'next/head'
 import pageData from "./pageData"
 
-export default function Home() {
 
-  const { home } = pageData
+export default function about(){
 
-  return (
+  const {about} = pageData
+  
+  return(
     <>
       <Head>
-        {home.headTitle}
+        {about.headTitle}
       </Head>
       <StandardLayout>
-        home
+        about
       </StandardLayout>
     </>
-  )
+  );
 }
