@@ -1,0 +1,20 @@
+#footerMain{
+  display: flex;
+}
+
+@media screen and (min-width: 480px) {
+  #footerMain{
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #footerMain{
+    flex-direction: row;
+  }
+}
+
+#signature{
+  display: flex;
+  justify-content: center;
+}
