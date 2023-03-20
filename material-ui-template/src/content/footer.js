@@ -14,7 +14,7 @@ const footer = {
   },
   signature:{
     signature:'Site built by Conor',
-    signatureURL:'https://conorjamesward.com/',
+    signatureURL:"https://conorjamesward.com/",
     copyright:`${date.getFullYear()}. All Rights Reserved`
   }
 

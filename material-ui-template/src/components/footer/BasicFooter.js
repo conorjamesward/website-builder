@@ -5,8 +5,6 @@ export default function BasicFooter(props){
 
   const {social, contact, signature} = props.footerData
 
-  console.log(!signature.signatureURl)
-
   return(
     <footer>
       <div id="mainFooter">
@@ -18,10 +16,10 @@ export default function BasicFooter(props){
         </Container>
       </div>
       <div id="signature">
-        {signature.signatureURl !== null &&
-          <a href={signature.signatureURl}>{signature.signature}</a>
+        {signature.signatureURL !== null &&
+          <a href={signature.signatureURL}>{signature.signature}</a>
         }
-        {!signature.signatureURl &&
+        {signature.signatureURL === null &&
           <p>{signature.signature}</p>
         }
         <p>&copy; {signature.copyright}</p>
