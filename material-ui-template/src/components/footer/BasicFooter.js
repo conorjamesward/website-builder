@@ -1,5 +1,6 @@
 import Container from '@mui/material/Container';
-import '@/styles/Footer.module.css'
+import Link from '@mui/material/Link';
+import styles from '@/styles/Footer.module.css'
 
 export default function BasicFooter(props){
 
@@ -15,14 +16,14 @@ export default function BasicFooter(props){
 
         </Container>
       </div>
-      <div id="signature">
+      <div className={styles.credit}>
         {signature.signatureURL !== null &&
-          <a href={signature.signatureURL}>{signature.signature}</a>
+          <Link underline='hover' href={signature.signatureURL}>{signature.signature}</Link>
         }
         {signature.signatureURL === null &&
           <p>{signature.signature}</p>
         }
-        <p>&copy; {signature.copyright}</p>
+        <p className={styles.copy}>&copy; {signature.copyright}</p>
       </div>
     </footer>
   );
