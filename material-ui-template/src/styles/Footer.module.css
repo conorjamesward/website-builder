@@ -1,27 +1,33 @@
-#footerMain{
+.footerMain{
   display: flex;
+  gap:10px;
+  padding-bottom: 10px;
 }
 
-@media screen and (min-width: 480px) {
-  #footerMain{
+@media screen and (max-width: 480px) {
+  .footerMain{
     flex-direction: column;
   }
 }
 
-@media screen and (min-width: 600px) {
-  #footerMain{
+@media screen and (min-width: 480px) {
+  .footerMain{
     flex-direction: row;
   }
 }
 
 .copy{
   text-align: center;
-  padding: 10px;
 }
 
 .credit{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding: 10px;
+}
+
+.social{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
