@@ -13,6 +13,7 @@
 @media screen and (min-width: 480px) {
   .footerMain{
     flex-direction: row;
+    justify-content: space-around;
   }
 }
 
@@ -30,4 +31,30 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+}
+
+.contactLink{
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contactContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contactInfo{
+  padding: 0px;
+  margin: 0px;
+}
+
+.siteMap{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
