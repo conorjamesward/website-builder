@@ -1,12 +1,21 @@
-import Header from "../components/Header";
+import MyHeader from "../components/MyHeader";
 import Footer from "../components/Footer";
+import about from "../pages/about";
 
 export default function Layout({children}){
+
+  const links = [{title:'Home', url:'/'}, 
+  {title:'About', url:'/about'}, 
+  {title:'FAQ', url:'/faq'}]
+
+  const branding = {title:'Tuk Template', icon:'icon here'}
+
+
   return(
     <>
-      <Header />
+      <MyHeader links={links} branding={branding}/>
         {children}
-      <Footer />
+      
     </>
   );
 }
