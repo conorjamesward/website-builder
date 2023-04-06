@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 export default function MyHeader({links, branding, socialMedia}){
@@ -8,25 +8,25 @@ export default function MyHeader({links, branding, socialMedia}){
 
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  const hamburger = useRef(null);
+  const textColor = 'black'
 
   return(
     <header className="flex flex-row justify-between">
       {isMobile &&
-        <div className="flex flex-col py-1 px-2">
+        <div className="flex flex-col py-1">
           <button className={show ? "hamburger hamburger-open" : "hamburger"} onClick={() => {
             setShow(!show)
           }}>
-            <span className="bg-black"></span>
-            <span className="bg-black"></span>
-            <span className="bg-black"></span>
-            <span className="bg-black"></span>
+            <span className={`bg-${textColor}`}></span>
+            <span className={`bg-${textColor}`}></span>
+            <span className={`bg-${textColor}`}></span>
+            <span className={`bg-${textColor}`}></span>
           </button>
           <nav>
-            <ul className={show ? "flex flex-col gap-2" : "hidden"}>
+            <ul className={show ? "bg-red-200 w-full fixed flex flex-col gap-2" : "hidden"}>
               {
                 links.map(link =>
-                  <li>
+                  <li key={link.title}>
                     <Link href={link.url}>{link.title}</Link>
                   </li>
                 )
@@ -41,11 +41,11 @@ export default function MyHeader({links, branding, socialMedia}){
       </div>
       {!isMobile &&
         <>
-          <nav>
+          <nav className="mt-4">
             <ul className="flex flex-row gap-2">
               {
                 links.map(link =>
-                  <li>
+                  <li key={`${link.title}-mobile`}>
                     <Link href={link.url}>{link.title}</Link>
                   </li>
                 )

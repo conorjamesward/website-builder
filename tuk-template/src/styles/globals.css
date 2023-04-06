@@ -5,9 +5,9 @@
 @layer components{
   .hamburger{
     width: 45px;
-    height: 30px;
+    height: 45px;
     position: relative;
-    margin: 2px auto;
+    margin: 5px 0px 0px 5px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
