@@ -4,12 +4,23 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
- 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    colors:{
+      primary: '#f3f4f6',
+      primaryLight: '#f9fafb',
+      primaryDark: '#e5e7eb',
+      secondary: '#1f2937',
+      secondaryLight: '#374151',
+      secondaryDark: '#111827',
+      tertiary: '#4b5563',
+      tertiaryLight: '#6b7280',
+      tertiaryDark: '#374151',
+      textColor: '#000',
+      backgroundColor: '#fff',
+    }
   },
   plugins: [],
 }

@@ -8,27 +8,31 @@ export default function MyHeader({links, branding, socialMedia}){
 
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  const textColor = 'black'
-  const headerColor = 'red-200'
-  const borderColor = 'green-500'
+  if (isMobile && show) {
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.hamburger')) {
+        setShow(false);
+      }
+    });
+  }
 
   return(
-    <header className={`flex flex-row justify-between bg-${headerColor}`}>
+    <header className='flex flex-row justify-between bg-secondary'>
       {isMobile &&
         <div className="flex flex-col py-1">
           <button className={show ? "hamburger hamburger-open" : "hamburger"} onClick={() => {
             setShow(!show)
           }}>
-            <span className={`bg-${textColor}`}></span>
-            <span className={`bg-${textColor}`}></span>
-            <span className={`bg-${textColor}`}></span>
-            <span className={`bg-${textColor}`}></span>
+            <span className="bg-textColor"></span>
+            <span className="bg-textColor"></span>
+            <span className="bg-textColor"></span>
+            <span className="bg-textColor"></span>
           </button>
           <nav>
-            <ul className={show ? `bg-${headerColor} w-full fixed flex flex-col gap-2 pl-2` : "hidden"}>
+            <ul className={show ? 'bg-secondary w-full fixed flex flex-col gap-2' : "hidden"}>
               {
                 links.map(link =>
-                  <li className={`font-semibold text-lg py-2`} key={`${link.title}-mobile`}>
+                  <li className={`font-semibold text-lg pl-2 py-2 shadow-inner`} key={`${link.title}-mobile`}>
                     <Link href={link.url}>{link.title}</Link>
                   </li>
                 )
