@@ -47,7 +47,7 @@ export default function MyHeader({links, branding, socialMedia}){
             <ul className="flex flex-row gap-5 px-10">
               {
                 links.map(link =>
-                  <li className='font-semibold text-xl' key={link.title}>
+                  <li className='font-semibold text-xl w-full' key={link.title}>
                     <Link href={link.url}>{link.title}</Link>
                   </li>
                 )
