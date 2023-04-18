@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-export default function MyFooter({links, branding, socialMedia}){
 
+export default function MyFooter({links, branding, socialMedia}){
 
 
   const [contactUs, setContactUs] = useState(false);
@@ -43,24 +43,28 @@ export default function MyFooter({links, branding, socialMedia}){
     }
   }
   return(
-    <footer className='flex justify-around'>
+    <footer className='flex justify-around border-t pt-4'>
+      <div>
+      
+      </div>
+
       {!contactUs ? (<div className='flex justify-center'>
-        <button className="bg-primary hover:bg-primaryDark text-textColor font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        <button className="bg-primary hover:bg-primaryDark text-textColor font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-auto"
           onClick={() => setContactUs(true)}>Contact Us</button>
         </div> ) : (
-        <div className="max-w-lg">
+        <div className="">
         {submitted ? (
-          <p className="text-green-600 font-bold text-lg text-center my-4">
+          <p className="text-textColorConfirmed font-bold text-lg text-center my-4">
             Thank you for contacting us!
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2" htmlFor="firstName">
+              <label className="block text-textColor font-bold mb-2" htmlFor="firstName">
                 First Name
               </label>
               <input
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border rounded w-full py-2 px-3 text-textColor leading-tight focus:outline-none focus:shadow-outline"
                 id="firstName"
                 type="text"
                 value={firstName}
@@ -69,11 +73,11 @@ export default function MyFooter({links, branding, socialMedia}){
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2" htmlFor="lastName">
+              <label className="block text-text-color font-bold mb-2" htmlFor="lastName">
                 Last Name
               </label>
               <input
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border rounded w-full py-2 px-3 text-textColor leading-tight focus:outline-none focus:shadow-outline"
                 id="lastName"
                 type="text"
                 value={lastName}
@@ -82,11 +86,11 @@ export default function MyFooter({links, branding, socialMedia}){
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+              <label className="block text-textColor font-bold mb-2" htmlFor="email">
                 Email
               </label>
               <input
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border rounded w-full py-2 px-3 text-text-color leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 type="email"
                 value={email}
@@ -95,11 +99,11 @@ export default function MyFooter({links, branding, socialMedia}){
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2" htmlFor="phoneNumber">
+              <label className="block text-text-color font-bold mb-2" htmlFor="phoneNumber">
                 Phone Number
               </label>
               <input
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border rounded w-full py-2 px-3 text-text-color leading-tight focus:outline-none focus:shadow-outline"
                 id="phoneNumber"
                 type="tel"
                 value={phoneNumber}
@@ -108,11 +112,11 @@ export default function MyFooter({links, branding, socialMedia}){
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2" htmlFor="message">
+              <label className="block text-text-color font-bold mb-2" htmlFor="message">
                 Message
               </label>
               <textarea
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border rounded w-full py-2 px-3 text-text-color leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
                 rows="5"
                 value={message}
