@@ -1,6 +1,5 @@
 import MyHeader from "../components/MyHeader";
-import Footer from "../components/Footer";
-import about from "../pages/about";
+import MyFooter from "../components/MyFooter";
 
 export default function Layout({children}){
 
@@ -10,14 +9,12 @@ export default function Layout({children}){
 
   const branding = {title:'Tuk Template', icon:'icon here'}
 
-  
-
 
   return(
     <>
       <MyHeader links={links} branding={branding}/>
         {children}
-      
+      <MyFooter links={links} branding={branding}/>
     </>
   );
 }

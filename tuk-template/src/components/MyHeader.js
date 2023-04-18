@@ -34,7 +34,7 @@ export default function MyHeader({links, branding, socialMedia}){
             <ul className={show ? 'bg-primary w-full fixed flex flex-col gap-2' : "hidden"}>
               {
                 links.map(link =>
-                  <li className={`font-semibold text-lg pl-2 py-2`} key={`${link.title}-mobile`}>
+                  <li className={`font-semibold text-xl pl-2 py-2 hover:bg-primaryDark`} key={`${link.title}-mobile`}>
                     <Link href={link.url}>{link.title}</Link>
                   </li>
                 )
@@ -53,8 +53,7 @@ export default function MyHeader({links, branding, socialMedia}){
             <ul className="flex flex-row gap-5 px-10">
               {
                 links.map(link =>
-                  //style the links here
-                  <li className='font-semibold text-xl w-full duration-200 hover:bg-primaryDark p-3 rounded-md m-1' key={link.title}>
+                    <li className='font-semibold text-xl w-full duration-200 hover:bg-primaryDark hover:text-textColorLight p-3 rounded-md m-1' key={link.title}>
                     <Link href={link.url}>{link.title}</Link>
                   </li>
                 )

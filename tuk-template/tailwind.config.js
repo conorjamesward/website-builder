@@ -18,7 +18,9 @@ module.exports = {
       tertiary: '#4b5563',
       tertiaryLight: '#6b7280',
       tertiaryDark: '#374151',
-      textColor: '#000',
+      textColor: '#030918',
+      textColorLight: '#3B4866',
+      textColorDark: '#000',
       backgroundColor: '#fff',
     }
   },
